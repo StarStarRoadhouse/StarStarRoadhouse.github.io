@@ -1,0 +1,316 @@
+// Variables
+$bgdark: #7d786f;
+$bglight: #9e9082;
+$red: #6d011f;
+$grey: #444444;
+$darkgrey: #333333;
+$showcase_height: 600px;
+$off_white: #fcfbf7;
+$off_white_darker: #e9e9e9;
+$highlite: rgb(121, 151, 11);
+$content-text-height: 150px;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lobster|Mr+Dafoe|Niconne|Norican');
+/*
+    font-family: 'Norican', cursive;
+    font-family: 'Mr Dafoe', cursive;
+    font-family: 'Niconne', cursive;
+    font-family: 'Lobster', cursive;
+*/
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  // font-weight: 900;
+  // font-size: 12px;
+  // color: black;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* We inherit box-sizing: border-box; from our <html> selector.  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Lobster', 'Norican', 'Mr Dafoe', 'Niconne', cursive;
+}
+
+a {
+  text-decoration: none;
+  color: $grey;
+  &:hover {
+    color: $red;
+  }
+}
+
+em {
+  font-weight: bold;
+  .bold {
+    font-size: larger;
+    text-shadow: 1px 0 #000;
+    letter-spacing: 1px;
+  }
+}
+
+img,
+#showcase,
+#main {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.highlight {
+  background-color: $highlite;
+  border-radius: 10%;
+}
+
+// hide large screen items
+.large {
+  display: none;
+}
+
+// Body
+body {
+  background-color: $bglight;
+}
+/* Header Showcase */
+header#showcase {
+  height: $showcase_height;
+  width: 100%;
+  position: relative;
+  padding-bottom: $content-text-height;
+  .bg-image {
+    position: absolute;
+    background: $bgdark url('./img/billboard.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: $showcase_height;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    // margin: 0;
+  }
+  .container {
+    display: grid;
+    #logo {
+      max-width: 300px;
+      margin: auto;
+      padding: 25px;
+    }
+    #nav {
+      margin: 25px;
+      order: -1;
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        li {
+          display: inline;
+        }
+      }
+    }
+  }
+  .content-wrap {
+    // display: inline-block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    margin: auto;
+    height: $content-text-height;
+    h1 {
+      font-family: 'Lobster', cursive;
+      // font-family: 'Mr Dafoe', cursive;
+      // font-family: 'Niconne', cursive;
+    }
+    .content-text {
+    }
+  }
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* Main Area */
+#main {
+  margin-bottom: 20px;
+  #icon {
+    background-color: $off_white;
+    // max-width: 100px;
+    height: 300px;
+    margin: 10px auto;
+    ul {
+      max-height: inherit;
+
+      display: grid;
+      // grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 15px;
+      li {
+        margin: 0;
+        .card {
+          // margin: 20px;
+          img {
+            max-width: 100px;
+            margin: 10px auto;
+          }
+          .card-content {
+            .card-title {
+              margin: 2px auto;
+            }
+            p {
+              margin: 5px auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  #schedule {
+    height: auto;
+    // margin: 15px auto;
+    .content-wrap {
+      padding: 25px 0 0;
+      h2.content-title {
+        padding-top: 0;
+      }
+    }
+    .small {
+      height: auto;
+      padding: auto 0;
+      margin: 0;
+      padding-bottom: 15px;
+    }
+  }
+  #image {
+    background-color: $bglight;
+    height: auto;
+    img {
+    }
+  }
+  #past-products {
+    background-color: $bglight;
+    padding-bottom: 35px;
+    .content-wrap {
+      padding-top: 15px;
+      h2.content-title {
+      }
+    }
+    div {
+    }
+    ul {
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      grid-row-gap: 15px;
+      li {
+        h3 {
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+        img {
+        }
+      }
+    }
+  }
+}
+
+#main-footer {
+  background-color: $bgdark;
+  padding: 25px 0;
+  margin: 25px 0;
+  img {
+    width: 250px;
+    height: auto;
+    margin: auto;
+  }
+}
+
+@import 'schedule';
+
+// The following rules only apply to larger screens
+@media (min-width: 900px) {
+  // show large screen items
+  .large {
+    display: initial;
+  }
+
+  // hide small screen items
+  .small {
+    display: none;
+  }
+
+  /* Main Area */
+  #main {
+    #icon {
+      ul {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 15px;
+        li {
+          .card {
+            img {
+            }
+            .card-content {
+              .card-title {
+              }
+              p {
+              }
+            }
+          }
+        }
+      }
+    }
+    #schedule {
+    }
+    #past-products {
+      .content-wrap {
+        h2.content-title {
+        }
+      }
+      div {
+        ul {
+          min-width: 100%;
+          margin: 0;
+          // padding: 0;
+          grid-template-columns: repeat(4, 1fr);
+          column-gap: 15px;
+          li {
+            h3 {
+            }
+            img {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #main-footer {
+  }
+}
