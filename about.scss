@@ -2,12 +2,18 @@
 
 // header
 header {
-  #logo {
-    width: 300px;
-    display: inline-block;
-    background: linear-gradient(white, var(--white));
+  .container {
+  }
+  .content-wrap {
+    .content-text {
+    }
+    p {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
   }
 }
+
 /* About / Boxes  */
 
 #about .box {
@@ -41,6 +47,9 @@ header {
   width: 90%;
   max-width: 1240px;
   margin: 0 auto;
+  @media (max-width: 666px) {
+    padding-top: 120px;
+  }
 
   display: grid;
 

@@ -23,8 +23,8 @@ body {
 
 /* We inherit box-sizing: border-box; from our <html> selector.  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector */
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
@@ -91,7 +91,7 @@ header#showcase {
 
 header#showcase .bg-image {
   position: absolute;
-  background: #7d786f url("./img/billboard.jpg");
+  background: #a79d8b url("./img/billboard.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,12 +136,17 @@ header#showcase .content-wrap {
   left: 0;
   right: 0;
   bottom: 0px;
-  margin: auto;
   height: 150px;
 }
 
 header#showcase .content-wrap h1 {
   font-family: 'Lobster', cursive;
+}
+
+@media (min-width: 1400px) {
+  header#showcase .content-wrap h1 {
+    color: #fcfbf7;
+  }
 }
 
 header::after {
@@ -156,13 +161,15 @@ header::after {
 }
 
 #main #icon {
-  background-color: #fcfbf7;
   height: 300px;
   margin: 10px auto;
 }
 
 #main #icon ul {
+  padding-top: 125px;
+  padding-bottom: 125px;
   max-height: inherit;
+  background-color: #a79d8b;
   display: -ms-grid;
   display: grid;
   grid-row-gap: 15px;
@@ -186,7 +193,10 @@ header::after {
 }
 
 #main #schedule {
+  padding-top: 75px;
+  padding-bottom: 175px;
   height: auto;
+  position: relative;
 }
 
 #main #schedule .content-wrap {
@@ -204,6 +214,13 @@ header::after {
   padding-bottom: 15px;
 }
 
+#main #schedule .brcorg {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  right: 0;
+}
+
 #main #image {
   background-color: #9e9082;
   height: auto;
@@ -212,6 +229,8 @@ header::after {
 #main #past-products {
   background-color: #9e9082;
   padding-bottom: 35px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #main #past-products .content-wrap {
@@ -232,8 +251,15 @@ header::after {
   margin-bottom: 0;
 }
 
+#main #past-products ul li img {
+  height: 200px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #main-footer {
-  background-color: #7d786f;
+  background-color: #a79d8b;
   padding: 25px 0;
   margin: 25px 0;
 }
@@ -396,6 +422,9 @@ header::after {
         grid-template-columns: repeat(4, 1fr);
     -webkit-column-gap: 15px;
             column-gap: 15px;
+  }
+  #main-footer {
+    background-color: #a79d8b;
   }
 }
 /*# sourceMappingURL=index.css.map */
