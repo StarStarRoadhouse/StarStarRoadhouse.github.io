@@ -4,6 +4,17 @@
 body {
   background-color: $bglight;
 }
+
+.playa-bg {
+  position: absolute;
+  background: $bgdark url('./img/playa.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: inherit;
+}
+
 /* Header Showcase */
 header#showcase {
   height: $showcase_height;
@@ -57,8 +68,6 @@ header#showcase {
         color: $off_white;
       }
     }
-    .content-text {
-    }
   }
 }
 
@@ -72,9 +81,13 @@ header::after {
 #main {
   margin-bottom: 20px;
   #icon {
-    // max-width: 100px;
     height: 300px;
     margin: 10px auto;
+    .playa-bg {
+      z-index: 2;
+      opacity: 0.1;
+      height: 59%;
+    }
     ul {
       padding-top: 125px;
       padding-bottom: 125px;
@@ -130,9 +143,53 @@ header::after {
     }
   }
   #image {
-    background-color: $bglight;
+    background-color: $bgdark;
     height: auto;
-    img {
+    @keyframes slidy {
+      0% {
+        left: 0%;
+      }
+      20% {
+        left: 0%;
+      }
+      25% {
+        left: -100%;
+      }
+      45% {
+        left: -100%;
+      }
+      50% {
+        left: -200%;
+      }
+      70% {
+        left: -200%;
+      }
+      75% {
+        left: -300%;
+      }
+      95% {
+        left: -300%;
+      }
+      100% {
+        left: -400%;
+      }
+    }
+
+    div#slider {
+      overflow: hidden;
+    }
+    div#slider figure img {
+      width: 20%;
+      float: left;
+    }
+    div#slider figure {
+      position: relative;
+      width: 500%;
+      margin: 0;
+      left: 0;
+      text-align: left;
+      font-size: 0;
+      animation: 30s slidy infinite;
     }
   }
   #past-products {
@@ -142,10 +199,6 @@ header::after {
     padding-right: 10px;
     .content-wrap {
       padding-top: 15px;
-      h2.content-title {
-      }
-    }
-    div {
     }
     ul {
       max-width: 250px;
@@ -171,8 +224,8 @@ header::after {
 
 #main-footer {
   background-color: $bgdark;
-  padding: 25px 0;
-  margin: 25px 0;
+  padding-top: 25px;
+  margin-top: 25px;
   img {
     width: 250px;
     height: auto;
@@ -200,27 +253,10 @@ header::after {
       ul {
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 15px;
-        li {
-          .card {
-            img {
-            }
-            .card-content {
-              .card-title {
-              }
-              p {
-              }
-            }
-          }
-        }
       }
     }
-    #schedule {
-    }
+
     #past-products {
-      .content-wrap {
-        h2.content-title {
-        }
-      }
       div {
         ul {
           min-width: 100%;
@@ -228,18 +264,8 @@ header::after {
           // padding: 0;
           grid-template-columns: repeat(4, 1fr);
           column-gap: 15px;
-          li {
-            h3 {
-            }
-            img {
-            }
-          }
         }
       }
     }
-  }
-
-  #main-footer {
-    background-color: $bgdark;
   }
 }

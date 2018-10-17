@@ -81,6 +81,16 @@ body {
   background-color: #9e9082;
 }
 
+.playa-bg {
+  position: absolute;
+  background: #a79d8b url("./img/playa.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: inherit;
+}
+
 /* Header Showcase */
 header#showcase {
   height: 600px;
@@ -165,6 +175,12 @@ header::after {
   margin: 10px auto;
 }
 
+#main #icon .playa-bg {
+  z-index: 2;
+  opacity: 0.1;
+  height: 59%;
+}
+
 #main #icon ul {
   padding-top: 125px;
   padding-bottom: 125px;
@@ -222,8 +238,88 @@ header::after {
 }
 
 #main #image {
-  background-color: #9e9082;
+  background-color: #a79d8b;
   height: auto;
+}
+
+@-webkit-keyframes slidy {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+@keyframes slidy {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+#main #image div#slider {
+  overflow: hidden;
+}
+
+#main #image div#slider figure img {
+  width: 20%;
+  float: left;
+}
+
+#main #image div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  -webkit-animation: 30s slidy infinite;
+          animation: 30s slidy infinite;
 }
 
 #main #past-products {
@@ -260,8 +356,8 @@ header::after {
 
 #main-footer {
   background-color: #a79d8b;
-  padding: 25px 0;
-  margin: 25px 0;
+  padding-top: 25px;
+  margin-top: 25px;
 }
 
 #main-footer img {
@@ -422,9 +518,6 @@ header::after {
         grid-template-columns: repeat(4, 1fr);
     -webkit-column-gap: 15px;
             column-gap: 15px;
-  }
-  #main-footer {
-    background-color: #a79d8b;
   }
 }
 /*# sourceMappingURL=index.css.map */
