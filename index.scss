@@ -23,7 +23,8 @@ header#showcase {
   padding-bottom: $content-text-height;
   .bg-image {
     position: absolute;
-    background: $bgdark url('./img/billboard.jpg');
+    background: $bgdark
+      url('https://media.githubusercontent.com/media/StarStarRoadhouse/StarStarRoadhouse.github.io/master/img/billboard.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
