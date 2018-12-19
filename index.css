@@ -83,7 +83,7 @@ body {
 
 .playa-bg {
   position: absolute;
-  background: #a79d8b url("./img/playa.jpg");
+  background: #a79d8b url("https://github.com/StarStarRoadhouse/StarStarRoadhouse.github.io/raw/master/img/playa.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -101,7 +101,7 @@ header#showcase {
 
 header#showcase .bg-image {
   position: absolute;
-  background: #a79d8b url("./img/billboard.jpg");
+  background: #a79d8b url("https://media.githubusercontent.com/media/StarStarRoadhouse/StarStarRoadhouse.github.io/master/img/billboard.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
