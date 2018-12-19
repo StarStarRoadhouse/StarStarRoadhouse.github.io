@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lobster|Mr+Dafoe|Niconne|Norican");
+@import url('https://fonts.googleapis.com/css?family=Lobster|Mr+Dafoe|Niconne|Norican');
 /*
     font-family: 'Norican', cursive;
     font-family: 'Mr Dafoe', cursive;
@@ -8,7 +8,7 @@
 html {
   /* border-box box model allows us to add padding and border to our elements without increasing their size */
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -26,7 +26,7 @@ body {
 *::before,
 *::after {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 ul {
@@ -83,7 +83,8 @@ body {
 
 .playa-bg {
   position: absolute;
-  background: #a79d8b url("https://github.com/StarStarRoadhouse/StarStarRoadhouse.github.io/raw/master/img/playa.jpg");
+  background: #a79d8b
+    url('https://github.com/StarStarRoadhouse/StarStarRoadhouse.github.io/raw/master/img/playa.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -101,7 +102,8 @@ header#showcase {
 
 header#showcase .bg-image {
   position: absolute;
-  background: #a79d8b url("https://media.githubusercontent.com/media/StarStarRoadhouse/StarStarRoadhouse.github.io/master/img/billboard.jpg");
+  background: #a79d8b
+    url('https://github.com/StarStarRoadhouse/StarStarRoadhouse.github.io/raw/master/img/billboard.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -125,15 +127,15 @@ header#showcase .container #logo {
 header#showcase .container #nav {
   margin: 25px;
   -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
+  -ms-flex-order: -1;
+  order: -1;
 }
 
 header#showcase .container #nav ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr) [4];
+  grid-template-columns: repeat(4, 1fr);
 }
 
 header#showcase .container #nav ul li {
@@ -319,7 +321,7 @@ header::after {
   text-align: left;
   font-size: 0;
   -webkit-animation: 30s slidy infinite;
-          animation: 30s slidy infinite;
+  animation: 30s slidy infinite;
 }
 
 #main #past-products {
@@ -507,17 +509,17 @@ header::after {
   }
   /* Main Area */
   #main #icon ul {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr) [3];
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 15px;
   }
   #main #past-products div ul {
     min-width: 100%;
     margin: 0;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr) [4];
+    grid-template-columns: repeat(4, 1fr);
     -webkit-column-gap: 15px;
-            column-gap: 15px;
+    column-gap: 15px;
   }
 }
 /*# sourceMappingURL=index.css.map */
