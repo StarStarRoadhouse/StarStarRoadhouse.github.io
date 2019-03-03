@@ -33,7 +33,7 @@
           <a class="nav-link" href="index.htm">HOME</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="about_us.htm">ABOUT US</a>
+          <a class="nav-link" href="about_us.htm">ABOUT US</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="show.htm">SHOW</a>
@@ -48,27 +48,53 @@
           <a class="nav-link" href="store.htm">STORE</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.htm">CONTACT</a>
+          <a class="nav-link active" href="contact.htm">CONTACT</a>
         </li>
       </ul>
     </div>
   </nav>
-  <br>
-  <br>
-  <br>
-  <br>
 
-  <section id="about_us">
+  <br>
+  <br>
+  <br>
+  <br>
+  <section id="contact">
     <div class="container">
-      <h2>ABOUT US</h2>
-      <h5 class="text-justify">
-        Star Star Roadhouse is the Rock and Roll theme camp of your dreams in Black Rock City, Nevada.  Each year we produce and perform a new original stage show as one of our gifts to the Burningman community. We are a diverse group of artists, builders, performers, chefs, service professionals, and burners who love what we do, and want to share it with you. Come visit us to see our show in person, participate in a workshop, hang around the stoop, service your bicycle, and catch a glimpse, or take a ride with our twin Deco Fish art cars.
-      </h5>
-      <br>
-      <br>
-      <img src="images/crew.jpg" class="d-block w-100" alt="Crew">
-    </div>
-  </section>
+        <h3>Write to us!</h3>
+        <form id="form_contact" name="form_contact" method="post" action="contact.htm" class="form-horizontal" role="form">
+          <div class="form-group">
+        	   <div class="col-sm-12">
+        			<input type="text" id="name" name="name" class="form-control input-sm" value="" maxlength="80" required data-validation="alphanumeric" placeholder="Name" />
+        		</div>
+        	</div>
+
+          <div class="form-group">
+            <div class="col-sm-12">
+              <input type="email" id="email" name="email" class="form-control input-sm" value="" maxlength="40" required data-validation="alphanumeric" placeholder="Email" />
+        		</div>
+        	</div>
+
+          <div class="form-group">
+        	  <div class="col-sm-12">
+              <input type="text" id="subject" name="subject" class="form-control input-sm" value="" maxlength="100" required data-validation="alphanumeric" placeholder="Subject" />
+        		</div>
+        	</div>
+
+          <div class="form-group">
+        	  <div class="col-sm-12">
+              <textarea class="form-control" rows="3" name="message" id="message" placeholder="Message"></textarea>
+        		</div>
+        	</div>
+
+          <div class="form-group">
+        	  <div class="col-sm-2 col-xs-6 col-sm-offset-10">
+              <button class="g-recaptcha btn btn-primary btn-block" data-size="invisible" data-sitekey="6Lfgy5IUAAAAAHk_8NAhl0PzVII-9muDIgtiXywC" data-callback="submitForm">Send</button>
+            </div>
+          </div>
+        </form>
+
+    </div><!--/container-->
+  </section><!--/contact-->
 
 </body>
 </html>
