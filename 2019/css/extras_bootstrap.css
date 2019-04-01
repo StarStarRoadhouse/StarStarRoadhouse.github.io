@@ -14,19 +14,28 @@
   font-family: 'Lato';
 }
 
-.carousel-inner
-{
-  height: 100vh !important;
-/*  background-color: #ffffff;*/
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
+
+/* responsive, form small screens, use 13px font size */
+@media (min-width: 992px) {
+  .carouselvh
+  {
+    height: 100vh !important;
+  /*  background-color: #ffffff;*/
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .carousel-inner
+  {
+    height: 100vh !important;
+  }
 }
 
 .image_large{
   flex: 1;
-  height: 100%;
-  width: auto !important;
+  height: auto !important;
+  width: 100% !important;
   flex-shrink: 0;
 }
 

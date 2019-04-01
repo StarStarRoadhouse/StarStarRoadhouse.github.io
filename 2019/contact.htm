@@ -12,6 +12,12 @@
 
   <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">var submitted=false;</script>
 </head>
 <body>
 
@@ -68,14 +74,14 @@
   <section id="contact">
     <style>
 
-      .form-dark input[type=text]:focus:not([readonly]), .form-dark textarea.md-textarea:focus:not([readonly])
+      .form-dark input[type=text]:focus:not([readonly]), .form-dark textarea.md-textarea:focus:not([readonly]), .form-dark input[type=email]:focus:not([readonly])
       {
         border-bottom: 1px solid #fff;
         -webkit-box-shadow: 0 1px 0 0 #fff;
         box-shadow: 0 1px 0 0 #fff;
       }
 
-      .form-dark input[type=text]:focus:not([readonly]) + label, .form-dark textarea.md-textarea:focus:not([readonly]) + label
+      .form-dark input[type=text]:focus:not([readonly]) + label, .form-dark textarea.md-textarea:focus:not([readonly]) + label, .form-dark input[type=email]:focus:not([readonly]) + label
       {
         color: #fff;
       }
@@ -87,40 +93,47 @@
     <div class="container form-dark">
       <div class="row justify-content-md-center">
         <!--Grid column-->
-      <div class="col-12 col-sm-10">
-        <!--Form-->
-        <div class="card wow fadeInRight" data-wow-delay="0.3s">
-          <div class="card-body z-depth-2 text-white">
-            <!--Header-->
-            <div class="text-center">
-              <h3>Write to us!</h3>
-              <hr>
-            </div>
-            <!--Body-->
-            <div class="md-form">
-              <i class="fas fa-user prefix grey-text"></i>
-              <input type="text" id="form3" class="form-control white-text">
-              <label for="form3">Your name</label>
-            </div>
-            <div class="md-form">
-              <i class="fas fa-envelope prefix grey-text"></i>
-              <input type="text" id="form2" class="form-control white-text">
-              <label for="form2">Your email</label>
-            </div>
-            <!--Textarea with icon prefix-->
-            <div class="md-form">
-              <i class="fas fa-pencil-alt prefix grey-text"></i>
-              <textarea type="text" id="form8" class="md-textarea form-control white-text" rows="3"></textarea>
-              <label for="form8">Your message</label>
-            </div>
-            <div class="text-center mt-3">
-              <button class="btn btn-elegant">Send</button>
-              <hr>
+        <div class="col-12 col-sm-10">
+
+          <!--Form-->
+          <div class="card wow fadeInRight" data-wow-delay="0.3s">
+            <div class="card-body z-depth-2 text-white">
+              <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfdHp-dovkShjCdNKxfxXxpudCV4IE40AT4nIhtvS3QbBunyQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                <!--Header-->
+                <div class="text-center">
+                  <h3>Write to us!</h3>
+                  <hr>
+                </div>
+                <!--Body-->
+                <div class="md-form">
+                  <i class="fas fa-user prefix grey-text"></i>
+                  <input type="text" name="entry.367928794" id="entry.367928794" class="form-control white-text">
+                  <label for="form3">Your name</label>
+                </div>
+                <div class="md-form">
+                  <i class="fas fa-envelope prefix grey-text"></i>
+                  <input type="email" name="entry.1737780924" id="entry.1737780924" class="form-control white-text">
+                  <label for="form2">Your email</label>
+                </div>
+                <!--Textarea with icon prefix-->
+                <div class="md-form">
+                  <i class="fas fa-pencil-alt prefix grey-text"></i>
+                  <textarea type="text" name="entry.1557738398" id="entry.1557738398" class="md-textarea form-control white-text" rows="3"></textarea>
+                  <label for="form8">Your message</label>
+                </div>
+                <div class="text-center mt-3">
+                  <input type="submit" value="Send" class="btn btn-elegant">
+                  <hr>
+                </div>
+              </form>
+              <div class="text-center mt-3">
+                <h3 id="answer" class="grey-text">
+                </h3>
+              </div>
+              <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
             </div>
           </div>
         </div>
-        <!--/.Form-->
-      </div>
       </div>
     </div><!--/container-->
   </section><!--/contact-->
@@ -145,18 +158,22 @@
     </div>
   </section>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="js/mdb.min.js"></script>
   <script>
+
     new WOW().init();
 
     $(".navbar-toggler").click(function(){
       $("nav").toggleClass("navbar-toggled");
     })
 
+  </script>
+  <script type="text/javascript">
+    $('#gform').on('submit', function(e) {
+      $('#gform *').fadeOut(1000);
+      $('#answer').html('Thank you for contacting us!');
+      });
   </script>
 </body>
 </html>
