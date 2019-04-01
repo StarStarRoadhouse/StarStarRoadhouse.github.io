@@ -28,15 +28,17 @@
 
   .carousel-inner
   {
-    height: 100vh !important;
+/*    height: 100vh !important;*/
   }
 }
 
 .image_large{
-  flex: 1;
+/*  flex: 1;*/
   height: auto !important;
   width: 100% !important;
-  flex-shrink: 0;
+  align-items:center;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
 }
 
 .navbar-toggled
