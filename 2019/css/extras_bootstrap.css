@@ -26,9 +26,9 @@
     overflow: hidden;
   }
 
-  .carousel-inner
+  .carousel_cars
   {
-/*    height: 100vh !important;*/
+    height: 90vh !important;
   }
 }
 
