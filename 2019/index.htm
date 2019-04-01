@@ -3,23 +3,22 @@
 <head>
   <title>STAR STAR ROADHOUSE</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/extras_bootstrap.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <nav id="navbar-star" class="navbar navbar-expand-md navbar-dark fixed-top">
+  <nav id="navbar-star" class="navbar navbar-expand-md navbar-dark fixed-top scrolling-navbar">
     <!-- Brand bg-primary  -->
     <a class="navbar-brand" href="index.htm">
-      <img src="images/StarStarLogoDarksm.png" alt="Logo" height="80" ><!--  class="img-fluid"  -->
+      <img src="images/StarStarLogoDarksm.png" alt="Logo" class="d-none d-lg-block" height="80"><!--  class="img-fluid"  -->
+      <img src="images/StarStarLogoDarksm.png" alt="Logo" class="d-lg-none d-xl-none" height="40"><!--  class="img-fluid"  -->
     </a>
 
     <!-- Toggler/collapsibe Button -->
@@ -46,7 +45,7 @@
           <a class="nav-link" href="gallery.htm">GALLERY</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="store.htm">STORE</a>
+          <a class="nav-link" href="https://starstar.threadless.com/" target="_blank">STORE</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.htm">CONTACT</a>
@@ -56,9 +55,9 @@
   </nav>
 
   <section id="home1">
-    <div class="container">
+    <div class="container-prueba mx-auto text-center">
       <div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel">
-        <ol class="carousel-indicators">
+        <ol class="carousel-indicators secondary">
           <li data-target="#carousel1" data-slide-to="0" class="active"></li>
           <li data-target="#carousel1" data-slide-to="1"></li>
           <li data-target="#carousel1" data-slide-to="2"></li>
@@ -71,28 +70,28 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-              <img src="images/carousel1/8420.jpg" class="d-block w-100" alt="...">
+              <img src="images/carousel1/8420.jpg" class="img-fluid image_large" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="images/carousel1/9326.jpg" class="d-block w-100" alt="...">
+            <img src="images/carousel1/9326.jpg" class="img-fluid image_large" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="images/carousel1/222.jpg" class="d-block w-100" alt="...">
+            <img src="images/carousel1/222.jpg" class="img-fluid image_large" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="images/carousel1/6250.jpg" class="d-block w-100" alt="...">
+            <img src="images/carousel1/6250.jpg" class="img-fluid image_large" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="images/carousel1/6324.jpg" class="d-block w-100" alt="...">
+            <img src="images/carousel1/6324.jpg" class="img-fluid image_large" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="images/carousel1/119.jpg" class="d-block w-100" alt="...">
+            <img src="images/carousel1/119.jpg" class="img-fluid image_large" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="images/carousel1/275.jpg" class="d-block w-100" alt="...">
+            <img src="images/carousel1/275.jpg" class="img-fluid image_large" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="images/carousel1/9599.jpg" class="d-block w-100" alt="...">
+            <img src="images/carousel1/9599.jpg" class="img-fluid image_large" alt="...">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev">
@@ -108,29 +107,40 @@
   </section>
 
   <br>
+  <hr class="extra-margins">
   <br>
   <section id="show">
-    <div class="container">
-      <h2>SHOW 2018</h2>
-<!--      <div id="carousel2" class="carousel slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-interval="3000">-->
-              <img src="images/show2018/113.jpg" class="d-block w-100" alt="...">
-<!--          </div>
-          <div class="carousel-item" data-interval="3000">
-            <img src="images/show2018/113.jpg" class="d-block w-100" alt="...">
+    <div class="container-fluid">
+      <div class="card wow fadeIn" data-wow-delay="0.2s">
+        <br>
+        <!--Title-->
+        <h2 class="text-center">SHOW 2019</h2>
+        <h4 class="text-center">We are proud to present our new production <strong>METAMORPHOSEX</strong>!</h4>
+        <h4>&nbsp;</h4>
+        <!--Card content-->
+        <div class="card-body">
+          <!--Text-->
+          <p class="card-title text-center">
+            Have a taste of our show body of light 2018
+          </p>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://player.vimeo.com/video/327181188?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><script src="https://player.vimeo.com/api/player.js"></script>
           </div>
         </div>
-      </div>-->
+
+      </div>
+      <!--/.Card-->
     </div>
   </section>
 
   <br>
+  <hr class="extra-margins">
   <br>
   <section id="map">
-    <div class="container">
+    <div class="container text-center wow fadeIn" data-wow-delay="0.2s">
       <h2>MAP</h2>
-      <h4>SOON OUR NEW LOCATION ON THE PLAYA!</h4>
+      <h4>Soon our new location on the playa!</h4>
+      <br>
       <div class="embed-responsive embed-responsive-16by9">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6042.565867004167!2d-119.2245432!3d40.7777936!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809fb834cedea63b%3A0xbeb0dbe188039187!2sBlack+Rock+City%2C+Nevada%2C+EE.+UU.!5e0!3m2!1ses!2smx!4v1551246463248" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>
         </iframe>
@@ -139,40 +149,68 @@
   </section>
 
   <br>
+  <hr class="extra-margins">
   <br>
   <section id="art_cars">
-    <div class="container">
-      <h2>ART CARS</h2>
-      <h4>DECO FISH TWINS “FIND US AT THE PLAYA”!</h4>
-      <img src="images/art_cars/artcarHOME.jpg" class="img-responsive w-100" alt="Art cars">
+    <div class="container-fluid">
+      <div class="card wow fadeIn" data-wow-delay="0.2s">
+        <h2 class="text-center">ART CARS</h2>
+        <h4 class="text-center">Deco Fish twins “find us at the playa!”</h4>
+        <!--Card content-->
+        <div class="card-body">
+          <img src="images/art_cars/artcarHOME.jpg" class="img-responsive w-100" alt="Art cars">
+        </div>
+      </div>
+
     </div>
   </section><!-- art cars -->
 
   <br>
   <br>
+
   <section id="schedule">
-    <div class="container">
-      <h2>SCHEDULE</h2>
-      <h4>To be determined...</h4>
+    <div class="container text-center">
+      <div class="card wow fadeIn" data-wow-delay="0.2s">
+        <h2 class="text-center">SCHEDULE</h2>
+        <h4 class="text-center">To be determined...</h4>
+        <p>&nbsp;
+        </p>
+      </div>
     </div>
   </section>
 
   <br>
+  <hr class="extra-margins">
   <br>
+
   <section id="footer">
     <div class="container">
       <div class="row text-center">
         <div class="col-sm-12">
           <a href="#home1" title="Top">
-            <img src="images/StarStarUnicornLogo.png" height="80"/>
+            <img src="images/StarLetrasBlancoCh.png" height="40"/>
           </a>
         </div>
-        <br>
         <div class="col-sm-12">
-          <span class="fa fa-copyright black">&nbsp;&nbsp;2019</span>
+          <span class="fa fa-copyright" >&nbsp;&nbsp;2019</span>
         </div>
+        <br>
       </div>
     </div>
   </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script>
+    new WOW().init();
+
+    $(".navbar-toggler").click(function(){
+      $("nav").toggleClass("navbar-toggled");
+    })
+
+  </script>
 </body>
 </html>
