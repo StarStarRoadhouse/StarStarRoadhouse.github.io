@@ -49,15 +49,14 @@
   background-image: url('https://mdbootstrap.com/img/svg/hamburger8.svg?color=FFFFFF');
 }
 
-.nav-item
-{
-/*  background-color: #000 !important;*/
-}
-
 .navbar-toggled
 {
-  background-color: #000 !important;
+  background-color: rgba(0, 0, 0, 0.8) !important;
 }
 
+.navbar-brand
+{
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
 
 /* Required for full background image */
