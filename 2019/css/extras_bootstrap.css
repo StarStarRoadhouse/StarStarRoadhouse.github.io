@@ -21,19 +21,20 @@
 
 /* responsive, form small screens, use 13px font size */
 @media (min-width: 992px) {
-  .carouselvh
-  {
-    height: 100vh !important;
-  /*  background-color: #ffffff;*/
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-  }
 
   .carousel_cars
   {
     height: 90vh !important;
   }
+}
+
+.carouselvh
+{
+  height: 100vh !important;
+/*  background-color: #ffffff;*/
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .image_large{
@@ -43,6 +44,12 @@
   align-items:center;
   margin-top: auto !important;
   margin-bottom: auto !important;
+}
+
+.image_tall
+{
+  width: 100% !important; height: auto !important; margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 .navbar-toggled
