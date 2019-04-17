@@ -25,6 +25,13 @@
   .carousel_cars
   {
     height: 90vh !important;
+    overflow: visible !important;
+  }
+
+  .carousel_venue
+  {
+    height: 90vh !important;
+    overflow: visible !important;
   }
 }
 
