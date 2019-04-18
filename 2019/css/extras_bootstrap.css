@@ -38,9 +38,9 @@
 .carouselvh
 {
   height: 100vh !important;
-/*  background-color: #ffffff;*/
+/*  background-color: #ffffff;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;*/
   overflow: hidden;
 }
 
@@ -48,9 +48,10 @@
 /*  flex: 1;*/
   height: auto !important;
   width: 100% !important;
-  align-items:center;
+/*  align-items:center;
+  vertical-align: middle !important;
   margin-top: auto !important;
-  margin-bottom: auto !important;
+  margin-bottom: auto !important;*/
 }
 
 .image_tall
