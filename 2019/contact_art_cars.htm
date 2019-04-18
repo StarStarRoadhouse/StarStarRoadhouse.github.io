@@ -103,7 +103,7 @@
               <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSfdHp-dovkShjCdNKxfxXxpudCV4IE40AT4nIhtvS3QbBunyQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
                 <!--Header-->
                 <div class="text-center">
-                  <h3>Write to us!</h3>
+                  <h3>Art cars off playa inquire!</h3>
                   <hr>
                 </div>
                 <!--Body-->
@@ -124,7 +124,7 @@
                   <label for="form8">Your message</label>
                 </div>
                 <div style="display:none;">
-                  <input type="text" name="entry.1022409176" id="entry.1022409176" value="CONTACT FORM">
+                  <input type="text" name="entry.1022409176" id="entry.1022409176" value="ART CARS FORM">
                 </div>
                 <div class="text-center mt-3">
                   <input type="submit" value="Send" class="btn btn-elegant">
@@ -183,10 +183,12 @@
 
   </script>
   <script type="text/javascript">
+
     $('#gform').on('submit', function(e) {
+      alert($('#entry.1022409176').val());
       $('#gform *').fadeOut(1000);
-      $('#answer').html('Thank you for contacting us!');
-      });
+      $('#answer').html('Thank\'s for your inquire!');
+    });
   </script>
 </body>
 </html>
