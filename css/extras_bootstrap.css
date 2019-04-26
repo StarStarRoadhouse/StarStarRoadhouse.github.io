@@ -1,0 +1,73 @@
+.body
+{
+/*  font-family: 'Lato';*/
+}
+
+.navbar a
+{
+  font-family: 'Lato';
+  font-size: 1rem !important;
+}
+
+.h1, .h2 , .h3, h1, h2, h3
+{/*.h4, .h5, , h4, h5*/
+  font-family: 'Lato';
+}
+
+.h4, .h5 , h4, h5, p
+{/*.h4, .h5, , h4, h5*/
+  line-height: 1.75rem !important;
+}
+
+/* responsive, form small screens, use 13px font size */
+@media (min-width: 992px) {
+
+  .carousel_cars
+  {
+    height: 90vh !important;
+    overflow: visible !important;
+  }
+
+  .carousel_venue
+  {
+    height: 90vh !important;
+    overflow: visible !important;
+  }
+}
+
+.carouselvh
+{
+  height: 100vh !important;
+/*  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;*/
+  overflow: hidden;
+}
+
+.image_large{
+/*  flex: 1;*/
+  height: auto !important;
+  width: 100% !important;
+/*  align-items:center;
+  vertical-align: middle !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;*/
+}
+
+.image_tall
+{
+  width: 100% !important; height: auto !important; margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.navbar-toggled
+{
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.navbar-brand
+{
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Required for full background image */
