@@ -3,6 +3,14 @@
 /*  font-family: 'Lato';*/
 }
 
+/*scheduleTab.nav-link.active*/
+
+.nav-tabs .nav-link.active
+{
+  background-color: #000000 !important;
+  border-color: #dfd7ca !important;
+}
+
 .navbar a
 {
   font-family: 'Lato';
